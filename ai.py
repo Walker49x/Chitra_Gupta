@@ -102,10 +102,10 @@ def trackMultipleObjects():
         for carID in carTracker.keys():
             trackedPosition = carTracker[carID].get_position()
 
-            t_x = int(trackerPosition.left())
+            t_x = int(trackerPosition.left())  # Change this line to use trackedPosition instead of trackerPosition
             t_y = int(trackerPosition.top())
             t_w = int(trackerPosition.width())
-            t_h= int(trackerPosition.height())
+            t_h = int(trackerPosition.height())
 
             cv2.rectangle(resultImage, (t_x, t_y),(t_x + t_w,t_y + t_h), rectangleColor, 4)
 
