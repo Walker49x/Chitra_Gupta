@@ -8,7 +8,7 @@ import cv2
 import os
 import numpy
 
-script_dir = os.path.dirname(__file__)
+script_dir = os.path.dirname(r'C:\Users\anura\PycharmProjects\Chitra_Gupta\assests\video.mp4')
 
 
 class VideoPlayer(tk.Frame):
