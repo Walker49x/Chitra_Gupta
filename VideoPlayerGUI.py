@@ -36,7 +36,7 @@ class VideoPlayer(tk.Frame):
         self.display.grid(row=0, sticky=tk.W + tk.E + tk.N + tk.S)
         self.pack(fill=tk.BOTH, expand=1)
 
-        self.startupBG = Image.open(os.path.join(script_dir, "assets/startup.jpg"))
+        self.startupBG = Image.open(os.path.join(script_dir, "assests/startup.jpg"))
         self.startupResized = self.startupBG.resize(self.videoSize, Image.ANTIALIAS)
         self.startupResized = ImageTk.PhotoImage(self.startupResized)
         self.display.delete("VID")
@@ -214,43 +214,43 @@ class VideoPlayer(tk.Frame):
         print("clicked at", event.x, event.y)
 
     def loadUI(self):
-        source_bar = Image.open(os.path.join(script_dir, "assets/bar_withLine.png"))
+        source_bar = Image.open(os.path.join(script_dir, "assests/bar_withLine.png"))
         source_bar = source_bar.resize((400, 100), Image.ANTIALIAS)
         self.barUI = ImageTk.PhotoImage(source_bar)
 
-        playImg = Image.open(os.path.join(script_dir, "assets/play.png"))
+        playImg = Image.open(os.path.join(script_dir, "assests/play.png"))
         playImg = playImg.resize((25, 25), Image.ANTIALIAS)
         self.playUI = ImageTk.PhotoImage(playImg)
 
-        pauseImg = Image.open(os.path.join(script_dir, "assets/pause.png"))
+        pauseImg = Image.open(os.path.join(script_dir, "assests/pause.png"))
         pauseImg = pauseImg.resize((25, 25), Image.ANTIALIAS)
         self.pauseUI = ImageTk.PhotoImage(pauseImg)
 
-        backwardImg = Image.open(os.path.join(script_dir, "assets/fast-backward.png"))
+        backwardImg = Image.open(os.path.join(script_dir, "assests/fast-backward.png"))
         backwardImg = backwardImg.resize((25, 25), Image.ANTIALIAS)
         self.backwardUI = ImageTk.PhotoImage(backwardImg)
 
-        forwardImg = Image.open(os.path.join(script_dir, "assets/fast-forward.png"))
+        forwardImg = Image.open(os.path.join(script_dir, "assests/fast-forward.png"))
         forwardImg = forwardImg.resize((25, 25), Image.ANTIALIAS)
         self.forwardUI = ImageTk.PhotoImage(forwardImg)
 
-        exportImg = Image.open(os.path.join(script_dir, "assets/file-export.png"))
+        exportImg = Image.open(os.path.join(script_dir, "assests/file-export.png"))
         exportImg = exportImg.resize((25, 25), Image.ANTIALIAS)
         self.exportUI = ImageTk.PhotoImage(exportImg)
 
-        importImg = Image.open(os.path.join(script_dir, "assets/file-import.png"))
+        importImg = Image.open(os.path.join(script_dir, "assests/file-import.png"))
         importImg = importImg.resize((25, 25), Image.ANTIALIAS)
         self.importUI = ImageTk.PhotoImage(importImg)
 
-        cameraImg = Image.open(os.path.join(script_dir, "assets/camera.png"))
+        cameraImg = Image.open(os.path.join(script_dir, "assests/camera.png"))
         cameraImg = cameraImg.resize((25, 25), Image.ANTIALIAS)
         self.cameraUI = ImageTk.PhotoImage(cameraImg)
 
-        gobackImg = Image.open(os.path.join(script_dir, "assets/undo.png"))
+        gobackImg = Image.open(os.path.join(script_dir, "assests/undo.png"))
         gobackImg = gobackImg.resize((25, 25), Image.ANTIALIAS)
         self.gobackUI = ImageTk.PhotoImage(gobackImg)
 
-        circleImg = Image.open(os.path.join(script_dir, "assets/circle.png"))
+        circleImg = Image.open(os.path.join(script_dir, "assests/circle.png"))
         circleImg = circleImg.resize((15, 15), Image.ANTIALIAS)
         self.circleUI = ImageTk.PhotoImage(circleImg)
 

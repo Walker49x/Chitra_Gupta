@@ -2,15 +2,16 @@ import cv2
 import dlib
 import time
 import math
+from VideoPlayerGUI import VideoPlayer
 
-carCascade = cv2.CascadeClassifier(r'C:\Users\anura\PycharmProjects\Chitra_Gupta\assests\vech.xml')
-video = cv2.VideoCapture(r'C:\Users\anura\PycharmProjects\Chitra_Gupta\assests\video.mp4')
+carCascade = cv2.CascadeClassifier(r'C:\Users\Priyanshu\PycharmProjects\Chitra_Gupta\assests\vech.xml')
+video = cv2.VideoCapture(r'C:\Users\Priyanshu\PycharmProjects\Chitra_Gupta\assests\video.mp4')
 
 WIDTH = 1280
 HEIGHT = 720
 
 def estimateSpeed(location1,location2):
-    d_pixels = math.sqrt(math.pow(location2[0]-location1[0],2) + math.pow(location2[1]-location1[1],2))
+    d_pixels = math.sqrt(math.pow(location2[0]-location1[0] , 2) + math.pow(location2[1]-location1[1],2))
     ppm = 8.8
     d_meters = d_pixels / ppm
     fps = 18
@@ -143,7 +144,10 @@ def trackMultipleObjects():
     out.release()
 
 if __name__ == '__main__':
-    trackMultipleObjects()
+    trackMultipleObjects(video)
+    video_player_gui = VideoPlayer()
+    video_player_gui.mainloop()
+
 
 
 
